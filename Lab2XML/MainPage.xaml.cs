@@ -345,7 +345,7 @@ namespace Lab2XML
             ResultsScrollView.IsVisible = false;
             ResultsContainer.Children.Clear();
 
-            FileStatusLabel.Text = "No file loaded";
+            //FileStatusLabel.Text = "No file loaded";
         }
 
         private async void OnInfoClicked(object sender, EventArgs e)
@@ -368,9 +368,6 @@ namespace Lab2XML
             }
 
         }
-
-
-
     }
 
 }
