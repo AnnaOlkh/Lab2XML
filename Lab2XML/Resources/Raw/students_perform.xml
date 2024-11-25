@@ -1,0 +1,67 @@
+﻿<EducationalInstitution>
+	<Faculty name="Фізико-математичний">
+		<Department name="Математика">
+			<Student id="1" name="Іваненко Іван Іванович">
+				<Discipline name="Математичний аналіз" grade="5" />
+				<Discipline name="Диференціальні рівняння" grade="4" />
+				<Discipline name="Лінійна алгебра" grade="5" />
+			</Student>
+			<Student id="2" name="Коваленко Марія Олександрівна">
+				<Discipline name="Математичний аналіз" grade="4" />
+				<Discipline name="Диференціальні рівняння" grade="3" />
+				<Discipline name="Лінійна алгебра" grade="5" />
+			</Student>
+		</Department>
+		<Department name="Фізика">
+			<Student id="3" name="Петренко Олена Василівна">
+				<Discipline name="Теоретична фізика" grade="5" />
+				<Discipline name="Механіка" grade="4" />
+				<Discipline name="Оптика" grade="5" />
+			</Student>
+			<Student id="9" name="Тарасенко Дмитро Олександрович">
+				<Discipline name="Теоретична фізика" grade="5" />
+				<Discipline name="Механіка" grade="4" />
+				<Discipline name="Оптика" grade="5" />
+			</Student>
+		</Department>
+	</Faculty>
+
+	<Faculty name="Кібернетики">
+		<Department name="Комп'ютерні науки">
+			<Student id="4" name="Сидоренко Андрій Павлович">
+				<Discipline name="Програмування" grade="5" />
+				<Discipline name="Бази даних" grade="4" />
+				<Discipline name="Мережеві технології" grade="5" />
+			</Student>
+			<Student id="5" name="Гриценко Євген Володимирович">
+				<Discipline name="Програмування" grade="4" />
+				<Discipline name="Операційні системи" grade="3" />
+				<Discipline name="Мережеві технології" grade="5" />
+			</Student>
+		</Department>
+		<Department name="Кібербезпека">
+			<Student id="6" name="Шевченко Наталія Олексіївна">
+				<Discipline name="Захист інформації" grade="5" />
+				<Discipline name="Криптографія" grade="4" />
+				<Discipline name="Мережеві технології" grade="5" />
+			</Student>
+		</Department>
+	</Faculty>
+
+	<Faculty name="Історичний">
+		<Department name="Археологія">
+			<Student id="7" name="Захаренко Олексій Ігорович">
+				<Discipline name="Археологія" grade="5" />
+				<Discipline name="Історія стародавнього світу" grade="5" />
+				<Discipline name="Антична культура" grade="4" />
+			</Student>
+		</Department>
+		<Department name="Етнографія">
+			<Student id="8" name="Бойко Дарина Василівна">
+				<Discipline name="Етнографія" grade="4" />
+				<Discipline name="Антропологія" grade="5" />
+				<Discipline name="Історія культури" grade="5" />
+			</Student>
+		</Department>
+	</Faculty>
+</EducationalInstitution>

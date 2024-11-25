@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2XML.MainPage"
+             BackgroundColor="White"
+             Title="XML Analyzer">
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Заголовок -->
+        <Label Text="XML Analyzer"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="Black" />
+
+        <!-- Кнопка для завантаження файлу -->
+        <Button x:Name="LoadFileButton"
+                Text="Load XML File"
+                FontSize="20"
+                BackgroundColor="Purple"
+                TextColor="White"
+                CornerRadius="10"
+                Padding="10"
+                HorizontalOptions="Center"
+                Clicked="OnFileSelectClicked" />
+
+        <!-- Інформація про стан -->
+        <Label x:Name="FileStatusLabel"
+               Text="No file loaded"
+               FontSize="16"
+               TextColor="Gray"
+               HorizontalOptions="Center" />
+
+        <!-- Поля для вибору (з'являються після завантаження файлу) -->
+        <VerticalStackLayout x:Name="OptionsStack" IsVisible="False" Spacing="20">
+            <!-- Вибір методу парсингу -->
+            <Label Text="Select Parsing Method:"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="Black" /> 
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <RadioButton Content="DOM" x:Name="DomOption" GroupName="ParsingMode" CheckedChanged="OnDomOptionChecked" />
+                    <RadioButton Content="SAX" x:Name="SaxOption" GroupName="ParsingMode" CheckedChanged="OnSaxOptionChecked" />
+                    <RadioButton Content="LINQ" x:Name="LinqOption" GroupName="ParsingMode" CheckedChanged="OnLinqOptionChecked" />
+            </HorizontalStackLayout>
+
+            <!-- Випадаючі списки розташовані горизонтально на ширину вікна -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="FillAndExpand">
+                <Picker x:Name="FacultyPicker"
+                        Title="Select Faculty"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="FillAndExpand" />
+                <Picker x:Name="DepartmentPicker"
+                        Title="Select Department"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="FillAndExpand" />
+                <Picker x:Name="DisciplinePicker"
+                        Title="Select Discipline"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="FillAndExpand" />
+                <Picker x:Name="NamePicker"
+                        Title="Select Name"
+                        BackgroundColor="LightGray"
+                        TextColor="Black"
+                        HorizontalOptions="FillAndExpand" />
+            </HorizontalStackLayout>
+
+            <!-- Кнопки -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                <Button Text="Search"
+                        BackgroundColor="Purple"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10"
+                        Clicked="OnSearchClicked" />
+                <Button Text="Transform to HTML"
+                        BackgroundColor="Purple"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10"
+                        Clicked="OnTransformToHtmlClicked" />
+                <Button Text="Clear"
+                        BackgroundColor="Gray"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Padding="10"
+                        Clicked="OnClearClicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
+
