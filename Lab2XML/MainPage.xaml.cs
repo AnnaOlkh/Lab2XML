@@ -136,10 +136,33 @@ namespace Lab2XML
 
         private void OnSearchClicked(object sender, EventArgs e)
         {
-            // Логіка для пошуку
+            try
+            {
+                if (string.IsNullOrEmpty(_loadedXmlContent))
+                {
+                    await DisplayAlert("Error", "Please load an XML file first.", "OK");
+                    return;
         }
 
-        private void OnTransformToHtmlClicked(object sender, EventArgs e)
+                // Приклад: результат після пошуку
+                var selectedFaculty = FacultyPicker.SelectedItem?.ToString();
+                var selectedDepartment = DepartmentPicker.SelectedItem?.ToString();
+                var selectedDiscipline = DisciplinePicker.SelectedItem?.ToString();
+                var selectedName = NamePicker.SelectedItem?.ToString();
+
+                var result = _currentParsingStrategy.Search(_loadedXmlContent, selectedFaculty, selectedDepartment, selectedDiscipline, selectedName);
+
+                if (result.Any())
+                {
+                    var htmlContent = GenerateHtml(result);
+                    await SaveHtmlToFileAsync(htmlContent, "FilteredStudents.html");
+                }
+                else
+                {
+                    await DisplayAlert("No Results", "No matching records found to convert to HTML.", "OK");
+                }
+            }
+            catch (Exception ex)
         {
             // Логіка для трансформації в HTML
         }
